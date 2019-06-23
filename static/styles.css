@@ -1,0 +1,44 @@
+.nav-bar{
+	padding: 10px;
+	background: #000;
+}
+.nav-bar .nav-bg{
+	display: flex;
+	font-size: 22px;
+	color: #FFF;
+	margin: 0px;
+}
+.nav-bar .nav-bg li{
+	list-style: none;
+}
+.nav-bar .nav-bg li.title{
+	padding: 14px 0px;
+}
+.nav-bar .nav-bg li a{
+	color: #FFF;
+	vertical-align: -webkit-baseline-middle;
+}
+.nav-bar .nav-bg li img{
+	width: 65px;
+	margin-right: 20px;
+}
+.jc-center{
+	justify-content: center;
+}
+.input-slots,
+.car-enter,
+.car-search,
+.search-result{
+	margin-top: 14px;
+}
+.input-slots label,
+.car-enter label{
+	padding: 12px;
+    padding-left: 0;
+}
+.car-enter input{
+	width: 68px;
+}
+.ds-hidden{
+	display: none !important;
+}
