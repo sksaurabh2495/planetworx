@@ -1,1 +1,77 @@
-index.html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <link rel="icon" type="image/png" sizes="16x16" href="./static/imgs/favicon-16x16.jpg">
+        <title>Planetworx Assignment</title>
+        <link href="./static/styles.css" rel="stylesheet" type="text/css" />
+        <link href="./static/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <ul class="nav-bg jc-center">
+                <li><img src="./static/imgs/favicon-16x16.jpg" /></li>
+                <li class="title"><a href="." >Planetworx Assignment</a></li>
+            </ul>
+        </nav>
+        <div class="stackable">
+            <div class="ui grid container">
+                <div class="twelve wide mobile twelve wide computer centered column">
+                    
+                    <div class="ui action input input-slots">
+                        <label for="input-slot">Enter No of Parking Slots</label>
+                        <input name="input-slot" type="text" placeholder="Search..." >
+                        <button class="ui button" onclick="createParking();">Create</button>
+                    </div>
+
+                    <div class="ui action input car-enter ds-hidden">
+                        <label for="input-car1">Enter Car No</label>
+                        <input name="input-car1" type="text" maxlength="2" placeholder="KA" >
+                        <input name="input-car2" type="text" maxlength="2" placeholder="01" >
+                        <input name="input-car3" type="text" maxlength="2" placeholder="AZ" >
+                        <input name="input-car4" type="text" maxlength="4" placeholder="2434" >
+                        <button class="ui button" onclick="enterCar();">Add Car</button>
+                    </div>
+
+                    <table class="ui celled table tablet stackable">
+                        <thead>
+                            <tr>
+                                <th>Slot</th>
+                                <th>Registration No</th>
+                                <th>Color</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="car-container">
+                            <tr id="car-item" class="car-item ds-hidden">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><button class="ui button negative" onclick="exitCar(this)">Remove</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <select class="ui search dropdown car-search">
+                        <option value="">KA-01-JQ-1234</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                    </select>
+                    <button class="ui button" onclick="searchCar()">Search Car</button>
+                    <div id="search-result"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="./static/jquery/jquery.min.js"></script>
+        <script src="./index.js"></script>
+        <script src="./static/semantic/dist/semantic.js"></script>
+    </body>
+</html>
